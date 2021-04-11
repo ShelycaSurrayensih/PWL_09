@@ -34,4 +34,7 @@
         @endforeach
 
     </table>
+    <div class="float-right my-2">
+        <a class="btn btn-success mt-3" href="{{ route('mahasiswa.index') }}">Kembali</a>
+    </div>
     @endsection
