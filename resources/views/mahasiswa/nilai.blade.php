@@ -17,25 +17,21 @@
         </div>
     </div>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered mt-3">
         <tr>
-            <th>Mata Kuliah</th>
+            <th width="300px">Mata Kuliah</th>
             <th>SKS</th>
             <th>Semester</th>
             <th>Nilai</th>
         </tr>
-        @foreach ($Mahasiswa->matakuliah as $matkul)
+        @foreach($Mahasiswa->matakuliah as $matakuliah)
         <tr>
-            <td>{{ $matkul->nama_matkul }}</td>
-            <td>{{ $matkul->sks }}</td>
-            <td>{{ $matkul->semester }}</td>
-            <td>{{ $matkul->pivot->nilai }}</td>
+            <td>{{$matakuliah->nama_matkul}}</td>
+            <td>{{$matakuliah->sks}}</td>
+            <td>{{$matakuliah->semester}}</td>
+            <td>{{$matakuliah->pivot->nilai}}</td>
         </tr>
         @endforeach
+
     </table>
-
-    <div class="float-right my-2">
-        <a class="btn btn-success mt-3" href="{{ route('mahasiswa.index') }}">Kembali</a>
-    </div>
-
-@endsection
+    @endsection
